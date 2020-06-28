@@ -9,6 +9,7 @@ stage('Change Version'){
  sh"""
        # sed -i 's/version: ".*"/version: "0.2.0"/g' test.json
        sed -i 's/version: ".*"/version: "$params.GIT_VERSION"/g' test.json
+       cat test.json
        
  """
 }
